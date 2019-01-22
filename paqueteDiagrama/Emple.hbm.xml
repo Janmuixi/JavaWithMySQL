@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jan 15, 2019 7:55:38 PM by Hibernate Tools 5.1.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ejemplo" dynamic-insert="false" dynamic-update="false" mutable="true" name="paqueteDiagrama.Emple" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="emple">
+        <id name="empNo" type="int">
+            <column name="emp_no"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="paqueteDiagrama.Depart" embed-xml="true" fetch="select" insert="true" name="depart" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="dept_no"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="apellido" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="apellido" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="oficio" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="oficio"/>
+        </property>
+        <property generated="never" lazy="false" name="dir" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="dir"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaAlt" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecha_alt"/>
+        </property>
+        <property generated="never" lazy="false" name="salario" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="salario"/>
+        </property>
+        <property generated="never" lazy="false" name="comision" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="comision"/>
+        </property>
+    </class>
+</hibernate-mapping>
